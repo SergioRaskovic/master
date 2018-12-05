@@ -60,7 +60,7 @@ int main()
 			cout << "I. vrsta" << endl;
 
 		}
-		else{d = 0; }
+		 
 		
 
 
