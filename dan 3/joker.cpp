@@ -18,16 +18,14 @@ int main()
 
 	for (int i = 0; i < 6; i++) {
 		cin >> a;
-		b = a - ((a / 10) * 10);
+		 b = a % 10;;
 		joker[i] = b;
 	}
 	for (int j = 0; j < 3; j++) {
 		cin >> brojjokera[j];
-	}
 
-	
 		for (int k = 0; k < 3; k++) {
-			c = sjebanbo[k];
+			c = brojjokera[k];
 
 			sjebanbo[0] = c / 100000;
 			sjebanbo[1] = (c - sjebanbo[0] * 100000) / 10000;
@@ -36,7 +34,7 @@ int main()
 			sjebanbo[4] = (c - sjebanbo[0] * 100000 - sjebanbo[1] * 10000 - sjebanbo[2] * 1000 - sjebanbo[3] * 100) / 10;
 			sjebanbo[5] = (c - sjebanbo[0] * 100000 - sjebanbo[1] * 10000 - sjebanbo[2] * 1000 - sjebanbo[3] * 100 - sjebanbo[4] * 10);
 		}
-		for (int l = 5; l >= 5; l -= 1){
+		for (int l = 5; l >= 0; l -= 1) {
 			if (joker[l] == sjebanbo[l]) {
 				d++;
 			}
@@ -53,13 +51,17 @@ int main()
 		else if (d == 4) {
 			cout << "III. vrsta" << endl;
 		}
-		else if (d==5) {
+		else if (d == 5) {
 			cout << "II. vrsta" << endl;
 		}
 		else if (d == 6) {
 			cout << "I. vrsta" << endl;
 
 		}
+	}
+
+	
+		
 		 
 		
 
