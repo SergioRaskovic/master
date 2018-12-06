@@ -1,8 +1,7 @@
-// ConsoleApplication23.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// ConsoleApplication24.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include "pch.h"
-#include <iostream>
 
 using namespace std;
 
@@ -21,14 +20,14 @@ int main()
 		b = a % 10;
 		joker[i] = b;
 	}
+
+
 	for (int j = 0; j < 3; j++) {
 		cin >> brojjokera[j];
 	}
-	for (int l = 0; l < 6; l++) {
-		if (joker[l] == sjebanbo[l]) {
-			d++
-		}
-	}
+
+
+
 	for (int k = 0; k < 3; k++) {
 		c = brojjokera[k];
 
@@ -39,40 +38,43 @@ int main()
 		sjebanbo[4] = (c - sjebanbo[0] * 100000 - sjebanbo[1] * 10000 - sjebanbo[2] * 1000 - sjebanbo[3] * 100) / 10;
 		sjebanbo[5] = (c - sjebanbo[0] * 100000 - sjebanbo[1] * 10000 - sjebanbo[2] * 1000 - sjebanbo[3] * 100 - sjebanbo[4] * 10);
 
-		
-		
-				if (d < 2)
-					cout << "Nedobitan" << endl;
+		for (int l = 0; l < 6; l++) {
+			if (joker[l] == sjebanbo[l]) {
+				d++;
+			}
+		}
 
-				else if (d == 2)
-					cout << "V. vrsta" << endl;
 
-				else if (d == 3)
-					cout << "IV. vrsta" << endl;
 
-				else if (d == 4)
-					cout << "III. vrsta" << endl;
 
-				else if (d == 5)
-					cout << "II. vrsta" << endl;
 
-				else if (d == 6)
-					cout << "I. vrsta" << endl;
 
-			
-		
-	
+		if (d < 2)
+			cout << "Nedobitan" << endl;
+
+		else if (d == 2)
+			cout << "V. vrsta" << endl;
+
+		else if (d == 3)
+			cout << "IV. vrsta" << endl;
+
+		else if (d == 4)
+			cout << "III. vrsta" << endl;
+
+		else if (d == 5)
+			cout << "II. vrsta" << endl;
+
+		else if (d == 6)
+			cout << "I. vrsta" << endl;
+
+
+
+
 		d = 0;
 	}
+
+
 }
-
-	
-		
-		 
-		
-
-
-
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
